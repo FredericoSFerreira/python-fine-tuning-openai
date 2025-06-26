@@ -2,7 +2,7 @@
 
 Um projeto Python para realizar fine-tuning de modelos da OpenAI utilizando dados personalizados.
 
-## 📋 Descrição
+## Descrição
 
 Este projeto oferece uma solução completa para treinar modelos customizados utilizando a API da OpenAI. Ele permite fazer upload de dados de treinamento, criar jobs de fine-tuning, monitorar o progresso do treinamento e realizar inferências com o modelo treinado.
 
@@ -10,7 +10,7 @@ Este projeto oferece uma solução completa para treinar modelos customizados ut
 ## O que NÃO é este projeto ##
 Este projeto não utiliza RAG (Retrieval-Augmented Generation), que é uma abordagem em que o modelo busca informações em bases externas para gerar respostas atualizadas. Diferentemente do RAG, aqui o modelo é diretamente ajustado com novos dados, o que significa que o conhecimento incorporado vem do processo de treinamento e está "embutido" no modelo final.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - **Upload de arquivos de treinamento** para a API da OpenAI
 - **Criação e gerenciamento de jobs de fine-tuning**
@@ -18,7 +18,22 @@ Este projeto não utiliza RAG (Retrieval-Augmented Generation), que é uma abord
 - **Inferência com modelos customizados** treinados
 - **Estrutura modular** com separação de responsabilidades
 
-## 📦 Instalação
+
+## Dashboard da OpenAi
+
+Visualização do modelo fine-tuned no dashboard da OpenAI após o término do treinamento.
+
+<p align="center">
+  <img src="img/print-finetuning-openai.png" alt="Descrição da imagem" width="600"/>
+</p>
+
+<p align="center">
+  <img src="img/print-2-finetuning-openai.png" alt="Descrição da imagem" width="600"/>
+</p>
+
+
+
+## Instalação
 
 ### Pré-requisitos
 
@@ -53,7 +68,7 @@ OPENAI_API_KEY=sua_chave_api_aqui
 OPENAI_API_MODEL=gpt-3.5-turbo
 ```
 
-## 🔧 Uso
+## Uso
 
 ### Estrutura do projeto
 
@@ -65,7 +80,6 @@ python-fine-tuning-openai/
 │   └── inference.py       # Inferência com modelos
 ├── training_data/         # Dados de treinamento
 ├── config/               # Configurações
-├── testes/               # Testes
 ├── main.py               # Script principal
 ├── fine_tune_openai.py   # Script alternativo completo
 └── .env                  # Variáveis de ambiente
@@ -91,7 +105,7 @@ Crie um arquivo `train.jsonl` no diretório `training_data/` com o formato o arq
 {"messages": [{"role": "user", "content": "Outra pergunta"}, {"role": "assistant", "content": "Outra resposta"}]}
 ```
 
-## 🛠️ Desenvolvimento
+## Desenvolvimento
 
 ### Estrutura modular
 
@@ -106,7 +120,7 @@ O projeto está organizado em módulos específicos:
 - `requests`: Para fazer chamadas HTTP à API da OpenAI
 - `python-dotenv`: Para gerenciamento de variáveis de ambiente
 
-## 📊 Exemplo de uso
+## Exemplo de uso
 
 ```python
 from core.upload import upload_file
@@ -127,6 +141,6 @@ resposta = ask_model(model_name, "Sua pergunta aqui")
 print("Resposta:", resposta)
 ```
 
-## ⚠️ Nota importante
+## Nota importante
 
 Certifique-se de ter créditos suficientes em sua conta da OpenAI, pois o fine-tuning consome tokens e pode gerar custos. Consulte a documentação oficial da OpenAI para informações sobre preços.
