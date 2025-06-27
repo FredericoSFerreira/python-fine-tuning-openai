@@ -81,7 +81,6 @@ python-fine-tuning-openai/
 ├── training_data/         # Dados de treinamento
 ├── config/               # Configurações
 ├── main.py               # Script principal
-├── fine_tune_openai.py   # Script alternativo completo
 └── .env                  # Variáveis de ambiente
 ```
 
